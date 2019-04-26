@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.AI;
+using UnityEngine.AI;
 
-public class Healthcellmovement : MonoBehaviour
+public class NewBehaviourScript : MonoBehaviour
 {
     public float velocidadMax;
 
@@ -11,9 +11,10 @@ public class Healthcellmovement : MonoBehaviour
     public float zMax;
     public float xMin;
     public float zMin;
-    //public float enemyDistance = 1.0f;
+    public float enemyDistance = 1000f;
+    public GameObject Cube;
 
-    //private NavMeshAgent _agent;
+    private NavMeshAgent _agent;
     private float x;
     private float z;
     private float tiempo;
@@ -29,7 +30,7 @@ public class Healthcellmovement : MonoBehaviour
         z = Random.Range(-velocidadMax, velocidadMax);
         angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
         transform.localRotation = Quaternion.Euler(0, angulo, 0);
-        //_agent = GetComponent<NavMeshAgent>();
+        _agent = GetComponent<NavMeshAgent>();
 
 
     }
@@ -39,7 +40,17 @@ public class Healthcellmovement : MonoBehaviour
     {
 
         tiempo += Time.deltaTime;
-       // float distance = Vector3.Distance(transform.position, )
+        float distance = Vector3.Distance(transform.position, Cube.transform.position);
+        Debug.Log("Distance: " + distance);
+
+
+        if(distance < enemyDistance)
+        {
+            Vector3 b = transform.position - Cube.transform.position;
+            Vector3 newPos = transform.position + b;
+
+            _agent.SetDestination(newPos);
+        }
 
         if (transform.localPosition.x > xMax)
         {
