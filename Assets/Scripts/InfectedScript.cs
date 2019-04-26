@@ -19,13 +19,20 @@ public class InfectedScript : MonoBehaviour
     void Update()
     {
 
-        if(cells.transform.childCount > 0)
+        if (currentPlayer >= cells.transform.childCount)
+        {
+            currentPlayer = Random.Range(0, cells.transform.childCount - 1);
+            Debug.Log(currentPlayer);
+        }
+
+        if (cells.transform.childCount > 0)
         {
             transform.LookAt(cells.transform.GetChild(currentPlayer));
 
             transform.position += transform.forward * MoveSpeed * Time.deltaTime;
         }
         
+       
     }
 
     void OnCollisionEnter(Collision collision)
