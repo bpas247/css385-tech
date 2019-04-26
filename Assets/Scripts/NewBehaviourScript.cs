@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
+//using UnityEngine.AI;
 
 public class NewBehaviourScript : MonoBehaviour
 {
@@ -14,7 +14,7 @@ public class NewBehaviourScript : MonoBehaviour
     public float enemyDistance = 1000f;
     public GameObject Cube;
 
-    private NavMeshAgent _agent;
+    //private NavMeshAgent _agent;
     private float x;
     private float z;
     private float tiempo;
@@ -30,7 +30,7 @@ public class NewBehaviourScript : MonoBehaviour
         z = Random.Range(-velocidadMax, velocidadMax);
         angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
         transform.localRotation = Quaternion.Euler(0, angulo, 0);
-        _agent = GetComponent<NavMeshAgent>();
+        //_agent = GetComponent<NavMeshAgent>();
 
 
     }
@@ -46,10 +46,15 @@ public class NewBehaviourScript : MonoBehaviour
 
         if(distance < enemyDistance)
         {
-            Vector3 b = transform.position - Cube.transform.position;
-            Vector3 newPos = transform.position + b;
+            // Vector3 b = transform.position - Cube.transform.position;
+            // Vector3 newPos = transform.position + b;
+            //transform.Translate(4 * Time.deltaTime, 0f, 0f);
 
-            _agent.SetDestination(newPos);
+            z = Random.Range(-velocidadMax, 0.0f);
+            angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
+            transform.localRotation = Quaternion.Euler(0, angulo, 0);
+            tiempo = 0.0f;
+
         }
 
         if (transform.localPosition.x > xMax)
