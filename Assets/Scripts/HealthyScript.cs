@@ -44,16 +44,20 @@ public class NewBehaviourScript : MonoBehaviour
         Debug.Log("Distance: " + distance);
 
 
-        if(distance < enemyDistance)
+        if(distance < enemyDistance) // if the distance of the two objects are in the enemzon, thhe object will run away
         {
             // Vector3 b = transform.position - Cube.transform.position;
             // Vector3 newPos = transform.position + b;
             //transform.Translate(4 * Time.deltaTime, 0f, 0f);
-
+            x = Random.Range(-velocidadMax, 0.0f);
+            angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
+            transform.localRotation = Quaternion.Euler(0, angulo, 0);
+            tiempo = 0.0f;
             z = Random.Range(-velocidadMax, 0.0f);
             angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
             transform.localRotation = Quaternion.Euler(0, angulo, 0);
             tiempo = 0.0f;
+
 
         }
 
