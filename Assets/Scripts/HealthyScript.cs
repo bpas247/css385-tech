@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 //using UnityEngine.AI;
 
-public class NewBehaviourScript : MonoBehaviour
+public class HealthyScript : MonoBehaviour
 {
     public float velocidadMax;
 
@@ -57,7 +57,14 @@ public class NewBehaviourScript : MonoBehaviour
             angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
             transform.localRotation = Quaternion.Euler(0, angulo, 0);
             tiempo = 0.0f;
-
+            x = Random.Range(0.0f, velocidadMax);
+            angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
+            transform.localRotation = Quaternion.Euler(0, angulo, 0);
+            tiempo = 0.0f;
+            z = Random.Range(0.0f, velocidadMax);
+            angulo = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
+            transform.localRotation = Quaternion.Euler(0, angulo, 0);
+            tiempo = 0.0f;
 
         }
 

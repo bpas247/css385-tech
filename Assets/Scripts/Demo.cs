@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 //using UnityEngine.AI;
 
-public class Healthcellmovement : MonoBehaviour
+public class Demo : MonoBehaviour
 {
     public float velocidadMax;
 
