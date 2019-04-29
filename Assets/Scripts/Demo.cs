@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 //using UnityEngine.AI;
 
-public class Demo : MonoBehaviour
+public class Healthcellmovement : MonoBehaviour
 {
     public float velocidadMax;
 
@@ -78,5 +78,10 @@ public class Demo : MonoBehaviour
             tiempo = 0.0f;
         }
         transform.localPosition = new Vector3(transform.localPosition.x + x, transform.localPosition.y, transform.localPosition.z + z);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Colliding");
     }
 }

@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 2129022112539410103}
   - component: {fileID: 2129022112539410104}
   m_Layer: 0
-  m_Name: Cylinder
-  m_TagString: Untagged
+  m_Name: Infected
+  m_TagString: Infected
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,8 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: decea5d3cf47eca4aad7402c8923a217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cells: {fileID: 0}
-  MoveSpeed: 6
+  MoveSpeed: 5
 --- !u!54 &2129022112539410104
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -122,5 +121,5 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
