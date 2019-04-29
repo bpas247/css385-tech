@@ -1,3 +1,7 @@
+[Demo URL](https://bpas247.github.io/css385-tech/)
+<br/>
+[URL To Source Code](https://github.com/bpas247/css385-tech)
+
 # Virus Infection Simulator
 
 A top-down 2d RTS game where the player must protect the healthy cells using protector cells against the infection.
