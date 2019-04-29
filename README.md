@@ -2,11 +2,14 @@
 
 A top-down 2d RTS game where the player must protect the healthy cells using protector cells against the infection.
 
+## Purpose
+
+The exciting part about our game is the way that each entity has a distinct behavior from each other, and the relationships they share with each other. They each have a key role in the lifecycle of the game, and we aimed to balance their relationships in order to provide an interesting gameplay that requires strategy on the player part to save the healthy cells from infection.
+
 ## Objectives
 
 - Save as many healthy cells from the infection.
 - Starve the infected cells by isolating them from the healthy ones via protector cells.
-
 
 ## Entities
 
